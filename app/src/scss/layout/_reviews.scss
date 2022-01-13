@@ -1,6 +1,7 @@
 .reviews{
     padding: 100px 0;
     background: #DFFFED;
+    margin-bottom: 100px;
     &__slider{
         margin: 0 -70px;
         width: calc(100% + 140px);
@@ -9,6 +10,11 @@
             margin: 0 -20px;
             width: calc(100% + 40px);
             padding: 40px 20px;
+        }
+        @include media(576){
+            margin: 0 -15px;
+            width: calc(100% + 30px);
+            padding: 40px 15px;
         }
     }
     &__slide{

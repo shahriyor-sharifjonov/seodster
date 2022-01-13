@@ -1,0 +1,45 @@
+.posts{
+    padding: 100px 0;
+    &__row{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: max-content;
+        margin-left: auto;
+        margin-right: auto;
+        gap: 30px;
+        margin-bottom: 30px;
+        @include media(1200){
+            flex-direction: column;   
+            width: 100%;
+            align-items: center;
+        }
+    }
+    &__item{
+        width: 33.333%;
+        max-width: 350px;
+        @include media(1200){
+            width: 100%;
+        }
+        @include media(400){
+            max-width: 100%;
+        }
+        img{
+            margin-bottom: 14px;
+            max-width: 100%;
+        }
+        &-title{
+            font-family: Gilroy;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 1;
+            font-feature-settings: 'salt' on, 'liga' off;
+            color: #18191F;            
+        }
+    }
+    &__btn{
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

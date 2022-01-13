@@ -9,6 +9,9 @@ const menuToggle = () => {
   menuOpened = !menuOpened;
   headerButton.classList.toggle("open");
   headerMenu.classList.toggle("open");
+  if(window.innerWidth <= 992){
+    document.body.classList.toggle('o-hidden')
+  }
 };
 headerButton.onclick = menuToggle;
 window.onclick = (e: MouseEvent) => {

@@ -1,0 +1,45 @@
+.footer{
+    background: #18191F;
+    &__body{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 40px 15px;
+        @include media(576){
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    &__left{
+        @include media(576){
+            display: flex;
+            margin-bottom: 30px;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    &__logo{
+        margin-bottom: 8px;
+    }
+    &__copy{
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        font-feature-settings: 'salt' on, 'liga' off;
+        color: #474A57;
+    }
+    &__link{
+        margin-bottom: 15px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1;
+        font-feature-settings: 'salt' on, 'liga' off;
+        color: #FFFFFF;        
+    }
+    &__right{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+    }
+}
