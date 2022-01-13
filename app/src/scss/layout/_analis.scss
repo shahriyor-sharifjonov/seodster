@@ -1,0 +1,46 @@
+.analis{
+    margin-bottom: 100px;
+    &__content{
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        background: #0A1C27;
+        border-radius: 16px;
+        padding: 40px 50px;
+        column-gap: 50px;
+    }
+    &__title{
+        font-family: Gilroy;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 40px;
+        line-height: 54px;
+        font-feature-settings: 'salt' on, 'liga' off;
+        color: #FFFFFF;
+        margin-bottom: 30px;
+        @include media(576){
+            font-size: 28px;
+            line-height: 120%;
+            margin-bottom: 20px;
+        }
+    }
+    &__p{
+        font-size: 18px;
+        line-height: 32px;
+        font-feature-settings: 'salt' on, 'liga' off;
+        color: #F1F2F6;
+        margin-bottom: 30px;
+        max-width: 768px;
+        @include media(576){
+            font-size: 16px;
+            line-height: 120%;
+            margin-bottom: 20px;
+        }
+    }
+    &__img{
+        @include media(992){
+            display: none;
+        }
+    }
+}

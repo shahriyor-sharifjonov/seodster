@@ -24,3 +24,31 @@ window.addEventListener('click', function(e :any){
     menuToggle();
   }
 })
+var swiper = new Swiper(".diploms__slider", {
+  slidesPerView: 1,
+  spaceBetween: 30,
+  grabCursor: true,
+  loop: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 30,
+    },
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    }
+    992: {
+      slidesPerView: 4,
+      spaceBetween: 30,
+    },
+  },
+});
