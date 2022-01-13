@@ -1,0 +1,108 @@
+.intro{
+    background: #E4EFF5;
+    padding-top: 120px;
+    position: relative;
+    padding-bottom: 100px;
+    margin-bottom: 50px;
+    &::before{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 200px;
+        background: #fff;
+        clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+        @include media(1200){
+            height: 100px;
+        }
+        @include media(992){
+            height: 70px;
+        }
+        @include media(576){
+            height: 40px;
+        }
+    }
+    &__body{
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    &__title{
+        font-family: 'Gilroy';
+        font-style: normal;
+        font-weight: 800;
+        font-size: 50px;
+        line-height: 120%;
+        font-feature-settings: 'salt' on, 'liga' off;
+        color: #18191F;
+        margin-bottom: 12px;
+        @include media(768){
+            font-size: 36px;   
+        }
+        @include media(576){
+            font-size: 33px;   
+        }
+    }
+    &__desc{
+        font-family: 'Gilroy';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 120%;
+        font-feature-settings: 'salt' on, 'liga' off;
+        color: #18191F;        
+        margin-bottom: 24px;
+        @include media(768){
+            font-size: 22px;   
+        }
+    }
+    &__row{
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin-bottom: 20px;
+        img{
+            margin-top: 4px;
+            margin-right: 10px;
+        }
+        p{
+            font-family: 'Gilroy';
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 22px;
+            font-feature-settings: 'salt' on, 'liga' off;
+            color: #18191F;
+        }
+    }
+    &__subtitle{
+        font-family: Gilroy;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 30px;
+        line-height: 120%;
+        font-feature-settings: 'salt' on, 'liga' off;
+        color: #18191F;        
+        margin-bottom: 6px;
+        @include media(768){
+            font-size: 26px;   
+        }
+    }
+    &__text{
+        font-family: Gilroy;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 22px;
+        font-feature-settings: 'salt' on, 'liga' off;
+        color: #18191F;
+        margin-bottom: 15px;
+    }
+    &__img{
+        margin-top: -90px;
+        @include media(1200){
+            display: none;
+        }
+    }
+}

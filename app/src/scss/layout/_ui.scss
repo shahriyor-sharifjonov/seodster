@@ -4,22 +4,115 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
     -webkit-tap-highlight-color: transparent;
-
+    font-family: 'Inter', sans-serif;
     &:focus,
     &:active {
         outline: none;
     }
 }
-
 button {
     font-family: inherit;
     cursor: pointer;
+    background: none;
+    border: none;
 }
-
 input {
     font-family: inherit;
 }
-
 a {
     text-decoration: none;
+}
+.drop{
+    position: relative;
+    &__btn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        font-feature-settings: 'salt' on, 'liga' off;
+        color: #18191F;
+        img{
+            margin-left: 7px;
+            transition: 200ms ease;
+        }
+        &.active{
+            img{
+                transform: rotate(180deg);
+            }
+            &~.drop__content{
+                display: flex;
+            }
+        }
+    }
+    &__content{
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        top: calc(100% + 6px);
+        left: 50%;
+        min-width: 100%;
+        width: 150px;
+        transform: translateX(-50%);
+        background: #0A1C27;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    &__link{
+        padding: 8px 16px;
+        width: 100%;
+        color: #fff;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        font-feature-settings: 'salt' on, 'liga' off;
+        &:hover{
+            background: lighten(#0A1C27, 5%);
+        }
+    }
+}
+.btn{
+    background: #31D37A;
+    border-radius: 6px;
+    padding: 12px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    font-feature-settings: 'salt' on, 'liga' off;
+    color: #FFFFFF;
+    width: max-content;
+    transition: 200ms ease-out;
+    &:hover{
+        background: #fff;
+        color: #31D37A;
+    }
+}
+.title{
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 64px;
+    font-feature-settings: 'salt' on, 'liga' off;
+    color: #18191F;
+    margin-bottom: 30px;
+    @include media(1200){
+        font-size: 44px;
+        line-height: 120%;
+    }
+    @include media(992){
+        font-size: 40px;   
+    }
+    @include media(768){
+        font-size: 32px;
+    }
+    @include media(576){
+        font-size: 28px;   
+    }
 }
