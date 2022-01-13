@@ -23,6 +23,74 @@ input {
 a {
     text-decoration: none;
 }
+.bg-blue{
+    background: #E4EFF5;
+}
+.accordion-container{
+    position: relative;
+    max-width: 850px;
+    height: auto;
+    margin: 0 auto;
+}
+.set{
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    overflow: hidden;
+    &:not(:last-of-type){
+        margin-bottom: 30px;
+    }
+}
+.set > a{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px;
+    border-bottom: 1px solid #E4EFF5;
+    transition:all 0.2s linear;
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    font-feature-settings: 'salt' on, 'liga' off;
+    color: #18191F;
+    background: #FFFFFF;
+    @include media(768){
+        font-size: 20px;
+        line-height: 120%;   
+    }
+    @include media(576){
+        font-size: 16px;
+    }
+}
+.set > a img{
+    transition: 200ms ease-out;
+}
+.set > a.active{
+    img{
+        transform: rotate(180deg);
+    }
+}
+.content{
+    background-color: #fff;
+    display:none;
+    padding: 25px 30px;
+}
+.content p{
+    font-size: 18px;
+    line-height: 26px;
+    font-feature-settings: 'salt' on, 'liga' off;
+    color: #18191F;
+    @include media(768){
+        font-size: 16px;
+        line-height: 120%;   
+    }
+    @include media(576){
+        font-size: 14px;
+    }
+}
 .drop{
     position: relative;
     width: max-content;
@@ -103,9 +171,31 @@ a {
     color: #FFFFFF;
     width: max-content;
     transition: 200ms ease-out;
+    border: 2px solid transparent;
     &:hover{
         background: #fff;
         color: #31D37A;
+        border: 2px solid #31D37A;
+    }
+    &-white{
+        background: #FFFFFF;
+        border-radius: 6px;
+        padding: 12px 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        font-feature-settings: 'salt' on, 'liga' off;
+        color: #18191F;
+        width: max-content;
+        transition: 200ms ease-out;
+        &:hover{
+            background: #31D37A;
+            color: #FFFFFF;
+        }
     }
 }
 .title{
@@ -140,7 +230,7 @@ a {
             top: 50%;
             transform: translateY(-50%);
             margin-top: 0;
-            @include media(1200){
+            @include media(1500){
                 right: 0;
                 display: none;
             }
@@ -153,7 +243,7 @@ a {
                 left: 0;
                 background: #fff;
                 z-index: 1;
-                @include media(1200){
+                @include media(1500){
                     display: none;   
                 }
             }     
@@ -169,7 +259,7 @@ a {
             top: 50%;
             transform: translateY(-50%);
             margin-top: 0;
-            @include media(1200){
+            @include media(1500){
                 left: 0;
                 display: none;
             }
@@ -182,7 +272,7 @@ a {
                 left: 0;
                 background: #fff;
                 z-index: 1;
-                @include media(1200){
+                @include media(1500){
                     display: none;
                 }
             }    
@@ -195,7 +285,7 @@ a {
 }
 .swiper-pagination{
     display: none;
-    @include media(1200){
+    @include media(1500){
         display: flex;
         align-items: center;
         justify-content: center;

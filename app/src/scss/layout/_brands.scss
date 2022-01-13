@@ -1,0 +1,27 @@
+.brands{
+    padding: 100px 0;
+    &__title{
+        text-align: center;
+    }
+    &__content{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 24px;
+        max-width: 946px;
+        margin: 0 auto 30px auto;
+    }
+    &__item{
+        width: 170px;
+        height: 96px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #FFFFFF;
+        box-shadow: 0px 30px 40px rgba(212, 217, 232, 0.2);
+        border-radius: 16px;
+    }
+    &__btn{
+        margin: 0 auto;
+    }
+}

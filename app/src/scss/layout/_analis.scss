@@ -9,6 +9,9 @@
         border-radius: 16px;
         padding: 40px 50px;
         column-gap: 50px;
+        @include media(576){
+            padding: 30px 25px;
+        }
     }
     &__title{
         font-family: Gilroy;

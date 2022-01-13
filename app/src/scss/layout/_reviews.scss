@@ -1,0 +1,104 @@
+.reviews{
+    padding: 100px 0;
+    background: #DFFFED;
+    &__slider{
+        margin: 0 -70px;
+        width: calc(100% + 140px);
+        padding: 40px 70px;
+        @include media(1500){
+            margin: 0 -20px;
+            width: calc(100% + 40px);
+            padding: 40px 20px;
+        }
+    }
+    &__slide{
+        &-next{
+            &::before{
+                background: #DFFFED;
+            }
+        }
+        &-prev{
+            &::before{
+                background: #DFFFED;
+            }
+        }
+        &-content{
+            margin-right: 20px;
+            @include media(576){
+                margin-right: 0;
+                margin-top: 20px;   
+            }
+        }
+        &-item{
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            box-shadow: 0px 10px 20px rgba(41, 41, 42, 0.07);
+            position: relative;
+            margin-bottom: 28px;
+            img{
+                margin-top: -40px;
+                box-shadow: 0px 10px 20px 0px #29292A12;
+                @include media(576){
+                    display: none;
+                }
+            }
+        }
+        &-title{
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 22px;
+            font-feature-settings: 'salt' on, 'liga' off;
+            color: #18191F;
+            margin-bottom: 10px;
+        }
+        &-p{
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 22px;
+            font-feature-settings: 'salt' on, 'liga' off;
+            color: #18191F;
+            margin-bottom: 10px;
+        }
+        &-link{
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 22px;
+            font-feature-settings: 'salt' on, 'liga' off;
+            color: #31D37A;
+        }
+        &-bot{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &-title{
+                font-weight: bold;
+                font-size: 18px;
+                line-height: 28px;
+                font-feature-settings: 'salt' on, 'liga' off;
+                color: #18191F;
+            }
+            &-profes{
+                font-size: 14px;
+                line-height: 24px;
+                margin-bottom: 10px;
+                font-feature-settings: 'salt' on, 'liga' off;
+                color: #18191F;
+            }
+            &-stars{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+    &__btn{
+        margin: 0 auto;
+    }
+    &__title{
+        margin-bottom: 20px;
+    }
+}
